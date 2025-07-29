@@ -1,0 +1,52 @@
+📘 Introdução Breve
+    O exercício ft_range propõe criar uma função que gere um array de 
+    inteiros com valores entre min (inclusive) e max (exclusivo).
+    A função deve alocar dinamicamente memória para armazenar esses
+    valores em sequência, retornando um ponteiro para o início do array.
+    É um ótimo exercício introdutório para compreensão de alocação de 
+    memória, uso de ponteiros e manipulação de arrays em C.
+
+
+✅ Pontos Positivos
+    - Prática com memória dinâmica: Trabalha com malloc, essencial para
+        programadores em C.
+    - Domínio de ponteiros: Promove entendimento sobre como manipular
+        endereços e referências.
+    - Lógica sequencial: Ajuda a fixar a ideia de intervalos numéricos
+        e preenchimento de vetores.
+    - Controle de erros: Treina o retorno de NULL em casos inválidos ou
+        falhas.
+    - Modularidade: Incentiva o uso de funções reutilizáveis para
+        operações com arrays.
+
+
+❌ Pontos Negativos
+    - Sem verificação de overflow: Pode haver riscos se max - min ultrapassar
+        limites de int.
+    - Ausência de tratamento avançado de erros: Alocação mal-sucedida não
+        mostra motivo.
+    - Não integra outras estruturas: Funciona só com arrays simples, sem
+        interação com structs ou funções mais complexas.
+    - Uso limitado no mundo real: Arrays com valores sequenciais são úteis
+        em casos específicos, mas poucos cenários exigem isso diretamente.
+
+
+💡 Quando Usar Este Tipo de Função
+    - Geração de valores sequenciais: Como índices, simulações ou testes.
+    - Inicialização de arrays: Para criar valores entre limites definidos.
+    - Ferramentas de ordenação ou busca: Útil ao preparar dados ordenados
+        para algoritmos.
+    - Criação de mapas numéricos: Ao montar estruturas para representar
+        tabuleiros, grids ou estatísticas.
+    - Simulação de comportamento linear: Em jogos, física ou estatística
+        simples.
+
+
+🧠 Enunciados Simples para Fixar a Lógica
+1. Crie uma função que devolve um array contendo números de 0 a 9.
+2. Gere um array com todos os inteiros entre -5 e 5 (excluindo o 5).
+3. Crie uma função que retorna NULL se min for maior ou igual a max.
+4. Altere a função para que ela preencha o array com valores
+    decrescentes entre max e min.
+5. Escreva uma função que retorna um array com os números pares entre
+    10 e 20.

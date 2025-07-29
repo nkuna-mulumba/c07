@@ -12,7 +12,8 @@
 
 /*
     * Reimplementa a função strdup.
-    * Cria uma nova string duplicando o conteúdo de `src` usando alocação dinâmica.
+    * Cria uma nova string duplicando o conteúdo de `src` usando
+        alocação dinâmica.
     * Funções autorizadas: malloc
 */
 
