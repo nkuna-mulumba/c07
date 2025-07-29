@@ -1,0 +1,39 @@
+🧠 Para que serve esse exercício?
+    Ele te ensina a recriar a função strdup do C, que serve para 
+    duplicar uma string em uma nova área da memória alocada dinamicamente.
+
+🔧 É um ótimo exercício para praticar:
+    - Manipulação de strings
+    - Alocação de memória com malloc
+    - Entendimento de ponteiros
+    - Boas práticas de verificação de erros.
+
+✅ Pontos positivos:
+    - Prático e direto: Simples, mas essencial para quem está aprendendo C
+    - Treina base da programação de baixo nível
+    - Fácil de testar e validar com casos simples
+    - Evita o uso de funções prontas, focando em lógica pura
+
+
+❌ Pontos negativos:
+    - Pode parecer trivial demais para quem já tem familiaridade com ponteiros
+    - Não cobre casos como string NULL (que não é exigido, mas é útil pensar nisso)
+    - Pouca escalabilidade — serve para fins bem específicos
+
+
+🕒 Quando pode ser usado?:
+    - Este tipo de função pode ser útil em diversas situações:
+    - Quando precisa guardar uma cópia segura de uma string original
+        (evita modificações indesejadas)
+    - Em estruturas de dados
+        (por exemplo, ao adicionar uma string em uma linked list)
+    - Ao trabalhar com arquivos ou entrada de usuário,
+        quando quer manter dados intactos
+
+
+🏋️‍♂️ 5 Exercícios básicos para melhorar entendimento
+    - Reimplementar strlen 👉 Medir o comprimento de uma string sem usar funções da biblioteca.
+    - Criar uma função que conta vogais em uma string 👉 Usa loops, condições e manipulação de char.
+    - Escrever uma função que inverte uma string (ft_strrev) 👉 Trabalha com ponteiros e troca de caracteres.
+    - Comparar duas strings (ft_strcmp) 👉 Introduz lógica condicional e retorno de valores.
+    - Duplicar parte de uma string (até certo índice) 👉 Aloca apenas o necessário e ensina a lidar com casos parciais.

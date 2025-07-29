@@ -1,0 +1,42 @@
+🎯 Objetivo do exercício ft_range
+    Criar uma função que devolve um ponteiro para um array de inteiros contendo 
+    todos os valores entre min (inclusivo) e max (exclusivo), com alocação 
+    dinâmica usando malloc. Esse exercício treina a capacidade de gerar dados 
+    programaticamente, calcular tamanhos corretos e manipular ponteiros com 
+    segurança.
+
+✅ Pontos positivos
+   - Ensina como usar malloc para criar arrays dinâmicos.
+   - Reforça lógica matemática simples (max - min).
+   - Desenvolve controle de fluxo e laços.
+   - Útil para pensar em sequências geradas automaticamente.
+   - Fácil de testar com main simples e printf.
+
+❌ Pontos negativos
+    - Pode gerar vazamento de memória se o array não for liberado com free.
+    - Confusão comum entre incluir ou excluir o max.
+    - Se não tratar min >= max, pode alocar memória desnecessária ou retornar dados errados.
+    - Alguns erram ao calcular o tamanho do array ou preenchê-lo corretamente.
+
+
+🕒 Quando pode ser usado
+    - Gerar faixas numéricas (por exemplo, [0–9] ou [-3–3]).
+    - Criar listas para testes, contadores ou simulação de dados.
+    - Preparar estruturas que exigem preenchimento sequencial.
+    - Inicializar valores em estruturas como matrizes, tabuleiros ou menus.
+    - Implementar funções auxiliares em algoritmos, como sort ou filtragem.
+
+🏋️‍♂️ 5 exercícios básicos para praticar e entender melhor
+    1 Crie uma função que exibe os valores de um array de inteiros passado por 
+        ponteiro e tamanho.
+      - Ajuda a visualizar os dados gerados por ft_range.
+    2. Implemente ft_range_reverse(min, max) que gera os números em ordem
+        decrescente.
+        - Faz pensar na lógica invertida.
+    3. Escreva uma função que conta quantos números existem entre min e max, sem
+        incluir max.
+        - Fortalece entendimento do cálculo max - min.
+    4. Teste ft_range com casos como min = max ou min > max, e exiba uma mensagem.
+        Reforça tratamento de entrada inválida.
+    5. Use ft_range para gerar um intervalo e calcule a soma dos elementos.
+        - Prática com arrays e lógica agregadora.
