@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucongol <jucongol@student.42.fr>          #+#  +:+       +#+        */
+/*   By: jcongolo <jcongolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-07-29 19:54:37 by jucongol          #+#    #+#             */
-/*   Updated: 2025-07-29 19:54:37 by jucongol         ###   ########.fr       */
+/*   Created: 2025/07/29 19:54:37 by jucongol          #+#    #+#             */
+/*   Updated: 2025/07/30 17:13:37 by jcongolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,60 +115,88 @@ char   *ft_strcat(char *dest, char *src)
 */
 char    *ft_strjoin(int size, char **strs, char *sep)
 {
+    int     index_strs;
+    long    len_strs;
     char    *str;
-    char    *tmp;
-    int     index;
-    long    total;
 
-    if(!size)
+    if(size <= 0)
     {
-        return(ft_empty_string());//Retornar "" se não houver strings
+        return(ft_empty_string());//Retornar '\0', se não houver strings
     }
-
-    total = 0;
-    index = 0;
+  
+    index_strs = 0;
+    len_strs = 0;
     //Somar os comprimentos de todas strings
-    while(index < size)
+    while(index_strs < size)
     {
-        total = total + ft_strlen(strs[index++]);
+        len_strs = len_strs + ft_strlen(strs[index_strs]);
+        index_strs++;
     }
 
     //Alocar espaço para todas strings, separadores e o '\0'
-    str = malloc(total + ft_strlen(sep) * (size - 1) + 1);
+    str = malloc(len_strs + ft_strlen(sep) * (size - 1) + 1);
     if(!str)
     {
         return(NULL);
     }
-
-    tmp = ft_strcat(str, strs[0]);//Começar com a primeira string
+    
+    str[0] = '\0';
+    ft_strcat(str, strs[0]);//Começar com a primeira string
     
     //Concatenar cada string com seu separador
-    index = 1;
-    while(index < size)
+    index_strs = 1;
+    while(index_strs < size)
     {
-        tmp = ft_strcat(tmp, sep);
-        tmp = ft_strcat(tmp, strs[index++]);
+        ft_strcat(str, sep);
+        ft_strcat(str, strs[index_strs]);
+        index_strs++;
     }
     return(str);//Retornar string final concatenada
 }
 
 
-
-#include <stdio.h>
-int main(void)
-{
-    char *words[] = {"olá", "mundo", "juliao"};
-    char *result = ft_strjoin(3, words, " | ");
-
-    if (result)
+/*
+    //Passar argumentos no main:
+    #include <stdio.h>
+    int main(void)
     {
-        printf("%s\n", result);
-        free(result);
-    }
-    else
-    {
-        printf("Erro ao alocar memória\n");
-    }
-    return 0;
-}
+        char    *strs[] = {"olá", "mundo", "juliao"};
+        int     size = sizeof(strs) / sizeof(strs[0]);
+        char    *result = ft_strjoin(size, strs, " | ");
+        
 
+        if (result != NULL)
+        {
+            printf("%s\n", result);
+            free(result);
+        }
+        else
+        {
+            printf("Erro ao alocar memória\n");
+        }
+        return 0;
+    }
+*/
+
+
+    //passar argumentos pelo terminal
+    #include <stdio.h>
+    int main(int argc, char **argv)
+    {
+        char    **strs = argv + 1; //Pula argv[0], que é o nome do programa
+        int     size = argc - 2; //Excluir executavel e seprador
+        char    *sep = argv[argc - 1]; //Ultimo argumento é o seprador
+        char    *result = ft_strjoin(size, strs, sep);
+        
+
+        if (result != NULL)
+        {
+            printf("%s\n", result);
+            free(result);
+        }
+        else
+        {
+            printf("Erro ao alocar memória\n");
+        }
+        return 0;
+    }

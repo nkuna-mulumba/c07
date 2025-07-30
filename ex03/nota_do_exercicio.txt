@@ -1,0 +1,44 @@
+📝 Introdução resumida
+        Este exercício propõe implementar ft_strjoin, uma função que junta várias
+    strings em uma só, separando cada uma com uma string específica (sep). É um 
+    ótimo treino de alocação dinâmica, manipulação de strings e organização de 
+    memória em C — usando apenas malloc.
+
+✅ Pontos positivos do exercício:
+    - Desenvolve manipulação de ponteiros e arrays de strings
+    - Ensina como calcular espaço necessário para uma string nova
+    - Reforça boas práticas de verificação de alocação (malloc)
+    - Estimula a criar funções genéricas e reutilizáveis
+    - Serve como base para aplicações reais (por exemplo, unir argumentos de terminal)
+
+⚠️ Pontos negativos / desafios:
+    - Requer atenção com detalhes: cálculo preciso de memória, \0, e separadores
+    - Pode causar erros sutis (como acesso fora de limites ou falta de inicialização)
+    - Não permite uso de funções auxiliares como strcpy, strcat nativas — exigindo reimplementações
+    - Testar todas as possibilidades exige cuidado: size = 0, sep = "", strings vazias, etc.
+
+
+🎯 Quando usar funções como ft_strjoin:
+    A função char *ft_strjoin(int size, char **strs, char *sep) é especialmente útil
+    quando precisamos unir múltiplas strings dinamicamente, separando cada uma por 
+    um delimitador (sep). Ela é usada em contextos como:
+    - Montar textos formatados com separadores (ex: CSV, logs, mensagens)
+    - Gerar uma string final a partir de partes fragmentadas
+    - Formatar argumentos de terminal em uma string única
+    - Criar templates, montar conteúdo ou textos estruturados
+    - Concatenar elementos em APIs, listas, JSONs, etc.
+
+📌 NB (nota bene): Esta versão de ft_strjoin não deve ser confundida com a versão
+    tradicional char *ft_strjoin(char *s1, char *s2);, que une apenas duas strings.
+    - Aqui trabalhamos com:
+    - Um array de char *
+    - Um separador entre os elementos
+    - Alocação dinâmica proporcional ao número de strings
+
+
+🧪 Enunciados para praticar e melhorar entendimento:
+ 1.✂️ ft_split: Implemente a função inversa — que quebra uma string em várias, usando o separador.
+ 2. 🔄 ft_join_reverse: Crie uma versão que junta strings em ordem reversa com separadores.
+ 3. 🧮 ft_total_length: Crie uma função que retorna o comprimento total da string final antes de alocar.
+ 4. 🧵 ft_strweave: Junta strings intercalando não apenas separadores, mas também prefixos/sufixos.
+ 5. 🎛️ ft_strjoin_custom: Implemente com argumentos extras para decidir se o separador aparece após o último elemento ou não.
