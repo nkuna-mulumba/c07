@@ -1,0 +1,47 @@
+🎯 Objetivo do Exercício
+    Desenvolver uma função que converte uma string representando
+    um número em determinada base personalizada (por exemplo, base 2,
+    16, etc.) para seu valor numérico em base decimal. Tudo isso sem
+    usar funções prontas como atoi, strtol ou similares.
+
+✅ Pontos Positivos:
+    - Desenvolve lógica algorítmica com uso de estruturas de repetição
+        e comparação.
+    - Fortalece manipulação de strings, uma habilidade essencial em C.
+    - Aprende a lidar com validação de dados, como verificar a base e
+        os caracteres.
+    - Te ensina a trabalhar com bases numéricas diferentes, como binário,
+        hexadecimal, etc.
+    - Cria funções reutilizáveis e auxiliares, o que é ótimo para
+        modularização.
+
+❌ Pontos Negativos / Desafios
+    - Pode ser confuso lidar com bases inválidas e regras de
+        exclusão (+, -, espaços...).
+    - Lidar com conversão exige precisão nos índices — qualquer erro pode
+        gerar um número incorreto.
+    - Não há tratamento nativo de erro, então precisa implementar manualmente.
+    - Muito cuidado com valores fora da base que podem passar despercebidos
+        se não houver checagem.
+
+
+🛠️ Quando Pode Ser Útil?
+    - Criar interpretação de strings numéricas em formatos diversos
+        (JSON, arquivos binários, etc.).
+    - Desenvolver partes de parsers, compiladores ou interpretadores.
+    - Implementar sistemas que aceitam inputs personalizados,
+        como calculadoras ou comandos em linha.
+    - Prática excelente para concursos ou entrevistas técnicas envolvendo C.
+
+
+🧪 Enunciados Práticos para Treinar
+   Aqui vão cinco exercícios extras pra colocar a lógica em ação:
+   1. Escreve uma função que valida se uma string representa um número
+        binário válido.
+   2. Cria uma função que converte um número binário em decimal sem usar atoi.
+   3. Garante que uma base passada como string esteja ordenada alfabeticamente
+        e sem repetições.
+   4. Dada uma base e uma string numérica, imprime o valor decimal e cada dígito
+        com seu índice na base.
+   5. Cria uma função que detecta o primeiro caractere inválido numa string
+        numérica com base X.
