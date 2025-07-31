@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucongol <jucongol@student.42.fr>          #+#  +:+       +#+        */
+/*   By: jcongolo <jcongolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-07-30 18:17:14 by jucongol          #+#    #+#             */
-/*   Updated: 2025-07-30 18:17:14 by jucongol         ###   ########.fr       */
+/*   Created: 2025/07/30 18:17:14 by jucongol          #+#    #+#             */
+/*   Updated: 2025/07/31 12:58:41 by jcongolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,27 +165,25 @@ char *ft_convert_base(char *nbr, char *base_from, char *base_to)
     return(ft_itoa_base(n , base_to));
 }
 
-
-#include <stdio.h>
-int main(void)
-{
-    char    *nbr = "ab";
-    char    *base_from = "0123456789abcdef";
-    char    *base_to = "01";
-
-    char    *res = ft_convert_base(nbr, base_from, base_to);
-    if (res)
+/*
+    #include <stdio.h>
+    int main(void)
     {
-        printf("Resultado da conversão: %s\n", res);
-        free(res);
+        char    *nbr = "ab";
+        char    *base_from = "0123456789abcdef";
+        char    *base_to = "01";
+
+        char    *res = ft_convert_base(nbr, base_from, base_to);
+        if (res)
+        {
+            printf("Resultado da conversão: %s\n", res);
+            free(res);
+        }
+        else
+        {
+            printf("Conversão falhou (base inválida ou erro).\n");
+        }
+        
+        return 0;
     }
-    else
-    {
-        printf("Conversão falhou (base inválida ou erro).\n");
-    }
-    
-    return 0;
-}
-
-
-
+*/
