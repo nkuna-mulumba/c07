@@ -1,0 +1,49 @@
+🧩 Explicação resumida do exercício
+    A ft_split recebe uma string e separa suas palavras, usando caracteres
+    personalizados como delimitadores. O resultado é um array onde cada
+    elemento é uma palavra da string original, sem incluir os separadores 
+    nem strings vazias.
+
+✅ Pontos positivos
+    - Flexível: aceita múltiplos separadores personalizados (charset)
+    - Isolada em funções auxiliares: boa modularidade (ft_count_word,
+        ft_fill_array, etc.)
+    - Memória gerenciada: inclui função ft_free_array para evitar vazamentos
+    - Cumpre rigorosamente o enunciado: retorna NULL em erro, ignora cadeias
+        vazias e finaliza com NULL
+
+
+⚠️ Pontos negativos:
+   - Não trata espaços/tabulações como separadores padrão, a menos que estejam
+        no charset
+   - Não aceita string const char *: a função exige char *, mesmo que não
+        modifique
+   - Não lida com strings vazias ou apenas separadores com otimização especial
+   - Retorno depende de malloc: consumo de memória aumenta proporcionalmente
+        ao número de palavras
+
+
+📌 Quando implementar desta maneira:
+    A abordagem usada é ideal para:
+    - Projetos educacionais como Libft ou MiniRT no curriculum 42
+    - Bibliotecas que não podem usar strtok, strsplit, ou funções externas
+    - Situações onde a separação precisa ser customizada
+        (ex: split por ;, -, espaço, etc.)
+    - Sistemas embarcados ou minimalistas onde o uso de funções padrão é 
+        limitado
+    - Pré-processamento de entrada textual (ex: separação de comandos 
+        em shells personalizados)
+
+
+🛠️ Enunciados práticos para treinar ft_split
+   1. Separar comandos simples Entrada: 
+        "ls -la /home" → Separador: " " → Saída: ["ls", "-la", "/home"]
+   2. Separar dados CSV Entrada: "Julio,Madrid,42" 
+        → Separador: "," → Saída: ["Julio", "Madrid", "42"]
+   3. Separar palavras ignorando pontuação Entrada: "Oi; tudo:bem!"
+        → Separadores: ";:!" → Saída: ["Oi", "tudo", "bem"]
+   4. Separar tags de arquivo Entrada: "photo-summer2025-travel
+        → Separador: "-" → Saída: ["photo", "summer2025", "travel"]
+   5. Extrair instruções de configuração Entrada:
+        "enable=true;debug=false;mode=prod" → Separador: ";" → Saída: 
+        ["enable=true", "debug=false", "mode=prod"]
